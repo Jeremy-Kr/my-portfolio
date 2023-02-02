@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { SkillsIcon, CustomParagraph, Subtitle } from "@/components";
-
+import { Subtitle, CustomParagraph } from "@/components/common";
+import { SkillsIcon } from "@/components";
 const Skills = () => {
   return (
     <SkillsContainer id="skills">
@@ -123,12 +123,7 @@ const SkillsSection = styled.section`
   }
 `;
 
-// const SkillsSectionTitle = styled(CustomParagraph)`
-//   font-size: 1.5rem;
-//   font-weight: 700;
-// `;
-
-const SkillsSectionTitle = styled.p`
+const SkillsSectionTitle = styled(CustomParagraph)`
   font-size: 1.5rem;
   font-weight: 700;
 `;

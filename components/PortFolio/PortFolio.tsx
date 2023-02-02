@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { PortFolioIcon, Subtitle, PortFolioItem } from "@/components";
+import { PortFolioIcon, PortFolioItem } from "@/components";
+import { Subtitle } from "@/components/common";
 
 const PortFolio = () => {
   return (

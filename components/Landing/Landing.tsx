@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { BarCodeText, LinkText, Title } from "../common/TextComponents";
-import Link from "next/link";
+import { BarCodeText, LinkText, Title } from "@/components/common";
 
 const Landing = () => {
   const landingTitleTexts = [

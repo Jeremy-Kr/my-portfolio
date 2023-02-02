@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-import { LogoFont } from "@/components";
+import { LogoFont, Subtitle } from "@/components/common";
 
 const NavBar = () => {
   return (

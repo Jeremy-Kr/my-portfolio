@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-import { CustomParagraph, Title } from "../common/TextComponents";
+import { CustomParagraph, Title } from "@/components/common";
 
 const About = () => {
   const info = [
