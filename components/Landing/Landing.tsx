@@ -27,14 +27,14 @@ const Landing = () => {
         <LandingSocialContainer>
           <SocialLinks>
             <SocialLinkText href="https://github.com/Jeremy-Kr">
-              GITHUB&gt;&gt;
+              GITHUB &gt;&gt;
             </SocialLinkText>
-            <SocialLinkText href="#">ROKETPUNCH&gt;&gt;</SocialLinkText>
+            <SocialLinkText href="#">ROKETPUNCH &gt;&gt;</SocialLinkText>
             <SocialLinkText href="mailto:wjddlr905@gmail.com">
-              EMAIL&gt;&gt;
+              EMAIL &gt;&gt;
             </SocialLinkText>
             <SocialLinkText href="https://open.kakao.com/o/smL6Sa2e">
-              KAKAOTALK&gt;&gt;
+              KAKAOTALK &gt;&gt;
             </SocialLinkText>
           </SocialLinks>
           <BarCode>

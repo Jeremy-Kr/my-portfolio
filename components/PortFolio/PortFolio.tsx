@@ -5,7 +5,7 @@ import { Subtitle } from "@/components/common";
 
 const PortFolio = () => {
   return (
-    <PortFolioContainer id="port-folio">
+    <PortFolioContainer id="portfolio">
       <PortFolioTitle>
         <Subtitle>PortFolio</Subtitle>
         <PortFolioIconContainer>

@@ -4,6 +4,7 @@ import { About } from "./About";
 
 import { Skills, SkillsIcon } from "./Skills";
 import { PortFolio, PortFolioItem, PortFolioIcon } from "./PortFolio";
+import { Contact, ContactIcon } from "./Contact";
 
 export {
   NavBar,
@@ -14,4 +15,6 @@ export {
   PortFolioIcon,
   Skills,
   SkillsIcon,
+  Contact,
+  ContactIcon,
 };

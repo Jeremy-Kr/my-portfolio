@@ -42,7 +42,7 @@ const PortFolioIcon = ({ width = "197", height = "114" }) => {
       <path
         d="M48 76.1682L84.5195 112.688M84.5195 112.688L196 1.20715M84.5195 112.688V51.4558M196 1.20715H144.104M196 1.20715V51.4558"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <rect
         x="84.4009"

@@ -1,7 +1,14 @@
 import Head from "next/head";
 import styled from "styled-components";
 
-import { Landing, NavBar, About, Skills, PortFolio } from "@/components";
+import {
+  Landing,
+  NavBar,
+  About,
+  Skills,
+  PortFolio,
+  Contact,
+} from "@/components";
 
 interface EclipseProps {
   left?: number;
@@ -38,6 +45,10 @@ export default function Home() {
         <Container>
           <Eclipse top={10} left={5} color="#cc957f" />
           <PortFolio />
+        </Container>
+        <Container>
+          <Eclipse bottom={15} right={5} color="#9c98d4" />
+          <Contact />
         </Container>
       </Main>
     </>

@@ -11,11 +11,11 @@ const NavBar = () => {
         <NavItemContainer>
           <NavItem href="#about">ABOUT</NavItem>
           <NavItem href="#skills">SKILLS</NavItem>
-          <NavItem href="#port-folio">PORTFOLIO</NavItem>
+          <NavItem href="#portfolio">PORTFOLIO</NavItem>
         </NavItemContainer>
       </Nav>
       <ContactContainer>
-        <NavItem href="#">CONTACT</NavItem>
+        <NavItem href="#contact">CONTACT</NavItem>
       </ContactContainer>
     </NavBarContainer>
   );
