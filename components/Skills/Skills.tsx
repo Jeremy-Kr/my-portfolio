@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
-
-import { SkillsIcon, Paragraph, Subtitle } from "@/components";
+import { SkillsIcon, CustomParagraph, Subtitle } from "@/components";
 
 const Skills = () => {
   return (
@@ -124,7 +123,12 @@ const SkillsSection = styled.section`
   }
 `;
 
-const SkillsSectionTitle = styled(Paragraph)`
+// const SkillsSectionTitle = styled(CustomParagraph)`
+//   font-size: 1.5rem;
+//   font-weight: 700;
+// `;
+
+const SkillsSectionTitle = styled.p`
   font-size: 1.5rem;
   font-weight: 700;
 `;

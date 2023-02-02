@@ -11,7 +11,7 @@ const NavBar = () => {
         <NavItemContainer>
           <NavItem href="#about">ABOUT</NavItem>
           <NavItem href="#skills">SKILLS</NavItem>
-          <NavItem href="#">PORTFOLIO</NavItem>
+          <NavItem href="#port-folio">PORTFOLIO</NavItem>
         </NavItemContainer>
       </Nav>
       <ContactContainer>

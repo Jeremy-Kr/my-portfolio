@@ -1,29 +1,35 @@
 import { NavBar } from "./Nav";
 import { Landing } from "./Landing";
 import { About } from "./About";
+import { Skills } from "./Skills";
+import { PortFolio, PortFolioItem } from "./PortFolio";
+
 import {
   SkillsIcon,
+  PortFolioIcon,
   LogoFont,
   Title,
   Subtitle,
-  Paragraph,
+  CustomParagraph,
   LinkText,
   Bold,
   BarCodeText,
 } from "./common";
-import { Skills } from "./Skills";
 
 export {
   NavBar,
   Landing,
   About,
   SkillsIcon,
+  PortFolioIcon,
   LogoFont,
   Title,
   Subtitle,
-  Paragraph,
+  CustomParagraph,
   LinkText,
   Bold,
   BarCodeText,
   Skills,
+  PortFolio,
+  PortFolioItem,
 };

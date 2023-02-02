@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-import { Paragraph, Title } from "@/components";
+import { CustomParagraph, Title } from "../common/TextComponents";
 
 const About = () => {
   const info = [
@@ -66,7 +66,7 @@ const AboutTitle = styled(Title)`
   margin-bottom: 3rem;
 `;
 
-const AboutTextContent = styled(Paragraph)`
+const AboutTextContent = styled(CustomParagraph)`
   font-size: 1.5rem;
   line-height: 2.5rem;
 `;

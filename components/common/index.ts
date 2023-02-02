@@ -1,9 +1,10 @@
 import SkillsIcon from "./SkillsIcon";
+import PortFolioIcon from "./PortFolioIcon";
 import {
   LogoFont,
   Title,
   Subtitle,
-  Paragraph,
+  CustomParagraph,
   LinkText,
   Bold,
   BarCodeText,
@@ -14,8 +15,9 @@ export {
   LogoFont,
   Title,
   Subtitle,
-  Paragraph,
+  CustomParagraph,
   LinkText,
   Bold,
   BarCodeText,
+  PortFolioIcon,
 };
