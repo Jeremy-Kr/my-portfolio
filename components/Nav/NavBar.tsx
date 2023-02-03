@@ -5,7 +5,7 @@ import { LogoFont, Subtitle } from "@/components/common";
 
 const NavBar = () => {
   return (
-    <NavBarContainer>
+    <NavBarContainer id="nav">
       <Nav>
         <LogoFont>JEONGIK__LEE</LogoFont>
         <NavItemContainer>

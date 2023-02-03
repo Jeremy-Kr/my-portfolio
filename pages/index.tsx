@@ -9,6 +9,8 @@ import {
   PortFolio,
   Contact,
 } from "@/components";
+import { CustomParagraph } from "@/components/common";
+import Link from "next/link";
 
 interface EclipseProps {
   left?: number;
@@ -47,18 +49,22 @@ export default function Home() {
           <PortFolio />
         </Container>
         <Container>
-          <Eclipse bottom={15} right={5} color="#9c98d4" />
+          <Eclipse bottom={0} right={5} color="#9c98d4" />
           <Contact />
         </Container>
+        <Footer>
+          <FooterTextContainer>
+            <FooterText>2023 JEONGIK__LEE</FooterText>
+            <TopButton href="#nav">TOP</TopButton>
+            <FooterText>Thanks to. @young-02</FooterText>
+          </FooterTextContainer>
+        </Footer>
       </Main>
     </>
   );
 }
 
-const Main = styled.main`
-  /* 지우기!@!! */
-  margin-bottom: 100px;
-`;
+const Main = styled.main``;
 
 const Container = styled.div`
   position: relative;
@@ -83,4 +89,30 @@ const Eclipse = styled.div<EclipseProps>`
   filter: blur(100px);
   transform: rotate(134.32deg);
   border-radius: 50%;
+`;
+
+const Footer = styled.footer`
+  width: 100%;
+  height: 14rem;
+  background-color: #000;
+`;
+
+const FooterTextContainer = styled.div`
+  width: 80rem;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 4rem;
+`;
+
+const FooterText = styled(CustomParagraph)`
+  color: #fff;
+  font-size: 1.2rem;
+`;
+
+const TopButton = styled(Link)`
+  color: #fff;
+  font-size: 1.2rem;
 `;
