@@ -3,9 +3,21 @@ import styled from "styled-components";
 import { PortFolioIcon, PortFolioItem } from "@/components";
 import { Subtitle } from "@/components/common";
 
-const PortFolio = () => {
+interface portfolioProps {
+  portfolios: Portfolio[];
+}
+
+interface PortFolioContainerProps {
+  rows: number;
+}
+
+const PortFolio = ({ portfolios }: portfolioProps) => {
+  const rows = Math.round(portfolios.length / 2);
+
+  console.log();
+
   return (
-    <PortFolioContainer id="portfolio">
+    <PortFolioContainer id="portfolio" rows={rows}>
       <PortFolioTitle>
         <Subtitle>PortFolio</Subtitle>
         <PortFolioIconContainer>
@@ -13,23 +25,20 @@ const PortFolio = () => {
         </PortFolioIconContainer>
       </PortFolioTitle>
       <PortFolioList>
-        <PortFolioItemRow>
-          <PortFolioItem />
-          <PortFolioItem />
-        </PortFolioItemRow>
-        <PortFolioItemRow>
-          <PortFolioItem />
-          <PortFolioItem />
-        </PortFolioItemRow>
+        <PortFolioItemContainer>
+          {portfolios.map((portfolio) => (
+            <PortFolioItem key={portfolio.id} portfolio={portfolio} />
+          ))}
+        </PortFolioItemContainer>
       </PortFolioList>
     </PortFolioContainer>
   );
 };
 
-const PortFolioContainer = styled.div`
+const PortFolioContainer = styled.div<PortFolioContainerProps>`
   width: 80rem;
   margin: 0 auto;
-  height: 62.5rem;
+  height: ${(props) => 12.5 + props.rows * 25}rem;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
 `;
@@ -55,15 +64,21 @@ const PortFolioList = styled.div`
   height: 50rem;
 `;
 
-const PortFolioItemRow = styled.div`
-  display: flex;
+const PortFolioItemContainer = styled.div`
+  /* display: flex; */
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid #000;
-
-  &:last-child {
-    border-bottom: none;
-  }
 `;
+
+// const PortFolioItemRow = styled.div`
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+//   border-bottom: 1px solid #000;
+
+//   &:last-child {
+//     border-bottom: none;
+//   }
+// `;
 
 export default PortFolio;

@@ -1,5 +1,8 @@
+import type { GetStaticProps } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import styled from "styled-components";
+import { supabase } from "@/lib/supabase";
 
 import {
   Landing,
@@ -10,7 +13,6 @@ import {
   Contact,
 } from "@/components";
 import { CustomParagraph } from "@/components/common";
-import Link from "next/link";
 
 interface EclipseProps {
   left?: number;
@@ -20,7 +22,11 @@ interface EclipseProps {
   color: string;
 }
 
-export default function Home() {
+interface PortfolioProps {
+  portfolios: Portfolio[];
+}
+
+export default function Home({ portfolios }: PortfolioProps) {
   return (
     <>
       <Head>
@@ -46,7 +52,7 @@ export default function Home() {
         </Container>
         <Container>
           <Eclipse top={10} left={5} color="#cc957f" />
-          <PortFolio />
+          <PortFolio portfolios={portfolios} />
         </Container>
         <Container>
           <Eclipse bottom={0} right={5} color="#9c98d4" />
@@ -116,3 +122,15 @@ const TopButton = styled(Link)`
   color: #fff;
   font-size: 1.2rem;
 `;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data, error } = await supabase.from("portfolio").select("*");
+  if (error) {
+    console.log(error);
+  }
+  return {
+    props: {
+      portfolios: data,
+    },
+  };
+};

@@ -4,31 +4,29 @@ import Link from "next/link";
 
 import { Bold, CustomParagraph } from "../common/TextComponents";
 
-const PortFolioItem = () => {
+interface PortFolioItemProps {
+  portfolio: Portfolio;
+}
+
+const PortFolioItem = ({ portfolio }: PortFolioItemProps) => {
+  const { date, title, skills, description, demo, github } = portfolio;
+  const newDate = date.split("-").slice(0, 2).join(".");
+
   return (
     <PortFolioItemContainer>
       <PortFolioHeader>
-        <PortFolioItemTitle>포트폴리오1</PortFolioItemTitle>
-        <CustomParagraph>React</CustomParagraph>
+        <PortFolioItemTitle>{title}</PortFolioItemTitle>
+        <CustomParagraph>{skills}</CustomParagraph>
       </PortFolioHeader>
       <PortFolioBody>
-        <CustomParagraph>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus,
-          numquam quo harum culpa porro aliquam nesciunt. Ut animi, beatae
-          blanditiis magni deserunt laudantium voluptas maxime provident sequi
-          iure consequatur exercitationem? Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Delectus, numquam quo harum culpa porro
-          aliquam nesciunt. Ut animi, beatae blanditiis magni deserunt
-          laudantium voluptas maxime provident sequi iure consequatur
-          exercitationem?
-        </CustomParagraph>
+        <PortFolioDescription>{description}</PortFolioDescription>
       </PortFolioBody>
       <PortFolioFooter>
-        <span>22.12.</span>
-        <PortFolioItemLink href="#" target="_blank">
+        <span>{newDate}</span>
+        <PortFolioItemLink href={demo} target="_blank">
           <PortFolioItemLinkText>DEMO</PortFolioItemLinkText>
         </PortFolioItemLink>
-        <PortFolioItemLink href="#" target="_blank">
+        <PortFolioItemLink href={github} target="_blank">
           <PortFolioItemLinkText>GITHUB</PortFolioItemLinkText>
         </PortFolioItemLink>
       </PortFolioFooter>
@@ -37,13 +35,14 @@ const PortFolioItem = () => {
 };
 
 const PortFolioItemContainer = styled.div`
+  display: inline-block;
   position: relative;
   width: 50%;
-  height: 100%;
+  height: 25rem;
   padding: 3rem;
   border-right: 1px solid #000;
 
-  &:last-child {
+  &:nth-child(2n) {
     border-right: none;
   }
 `;
@@ -60,6 +59,16 @@ const PortFolioItemTitle = styled(Bold)`
 
 const PortFolioBody = styled.div`
   margin-bottom: 2rem;
+  height: 12rem;
+`;
+
+const PortFolioDescription = styled(CustomParagraph)`
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 
 const PortFolioFooter = styled.div`
