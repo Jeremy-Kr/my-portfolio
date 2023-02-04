@@ -65,20 +65,8 @@ const PortFolioList = styled.div`
 `;
 
 const PortFolioItemContainer = styled.div`
-  /* display: flex; */
   width: 100%;
   height: 100%;
 `;
-
-// const PortFolioItemRow = styled.div`
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-//   border-bottom: 1px solid #000;
-
-//   &:last-child {
-//     border-bottom: none;
-//   }
-// `;
 
 export default PortFolio;
