@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
@@ -123,7 +123,7 @@ const TopButton = styled(Link)`
   font-size: 1.2rem;
 `;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const { data, error } = await supabase.from("portfolio").select("*");
   if (error) {
     console.log(error);
